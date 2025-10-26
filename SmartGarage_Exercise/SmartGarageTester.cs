@@ -42,7 +42,7 @@ namespace SmartGarage_Exercise
 		/// <summary>
 		/// (פונקציה ישנה למחיקה) מזיזה ימינה 3 סוגי מערכים נפרדים.
 		/// </summary>
-		public static void MoveAllRight(Car[] cars, Motorcycle[] bikes, CleaningRobot[] robots)
+		public static void MoveAllRight(Car[] cars, MotorCycle[] bikes, CleaningRobot[] robots)
 		{
 			Console.WriteLine("\n--- Moving all units right ---");
 			foreach (var car in cars)
@@ -59,16 +59,10 @@ namespace SmartGarage_Exercise
 			}
 		}
 
-		// --- פונקציות יעד חדשות (מכילות רק חתימה והערות) ---
-		// --- עליכם לגרום לקוד הבא (שנמצא בהערה) לעבוד ---
-
-		/*
-        /// <summary>
-        /// (פונקציה למשימה ד') בודקת מערך פולימורפי של כלי רכב.
-        /// הפונקציה הזו מסופקת לכם במלואה כדוגמה.
-        /// </summary>
-        /// <param name="allVehicles">מערך של כלי רכב (Vehicle).</param>
-        public static void TestAllVehicles(Vehicle[] allVehicles)
+	  /* </summary>
+        <param name="allVehicles">מערך של כלי רכב (Vehicle).</param>*/
+        
+		public static void TestAllVehicles(Vehicle[] allVehicles)
         {
             Console.WriteLine("\n--- Commencing Vehicle diagnostics ---");
             foreach (var v in allVehicles)
@@ -83,7 +77,7 @@ namespace SmartGarage_Exercise
                 v.Refuel(); 
             }
         }
-        */
+        
 
 		/*
         // -----------------------------------------------------------------

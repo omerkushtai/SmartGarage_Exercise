@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ namespace SmartGarage_Exercise
 	/// <summary>
 	/// מייצג אופנוע בעל מנוע דלק.
 	/// </summary>
-	public class Motorcycle
+	public class MotorCycle:Vehicle
 	{
 		/// <summary>
 		/// שם הדגם של האופנוע.
@@ -32,7 +32,7 @@ namespace SmartGarage_Exercise
 		/// </summary>
 		/// <param name="model">שם דגם האופנוע.</param>
 		/// <param name="fuel">כמות הדלק ההתחלתית.</param>
-		public Motorcycle(string model, int fuel)
+		public MotorCycle(string model, int fuel)
 		{
 			ModelName = model;
 			// Math.Clamp: מבטיח שהדלק יהיה תמיד בטווח 0-100.
@@ -81,4 +81,8 @@ namespace SmartGarage_Exercise
 		}
 	}
 
+    internal interface Imoveable
+    {
+    }
 }
+

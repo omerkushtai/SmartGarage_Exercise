@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ namespace SmartGarage_Exercise;
 		/// <summary>
 		/// מייצגת מכונית בעלת מנוע דלק.
 		/// </summary>
-		public class Car
+		public class Car:Vehicle
 		{
 			/// <summary>
 			/// שם הדגם של המכונית.
@@ -84,3 +84,4 @@ namespace SmartGarage_Exercise;
 		}
 
 	
+

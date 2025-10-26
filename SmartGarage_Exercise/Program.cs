@@ -8,13 +8,13 @@
 
 			// --- יצירת האובייקטים הנפרדים ---
 			Car car1 = new Car("Subaru Impreza", 20);
-			Motorcycle bike1 = new Motorcycle("Kawasaki Ninja", 40);
+			MotorCycle bike1 = new MotorCycle("Kawasaki Ninja", 40);
 			CleaningRobot robot1 = new CleaningRobot("S-500", 15);
 
 			// --- הדרך הישנה והמסורבלת ---
 			// אנו נאלצים להחזיק 3 מערכים נפרדים!
 			Car[] carFleet = { car1 };
-			Motorcycle[] bikeFleet = { bike1 };
+			MotorCycle[] bikeFleet = { bike1 };
 			CleaningRobot[] robotFleet = { robot1 };
 
 			// הפעלת הפונקציות הישנות
