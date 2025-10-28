@@ -16,7 +16,7 @@
 			Car[] carFleet = { car1 };
 			MotorCycle[] bikeFleet = { bike1 };
 			CleaningRobot[] robotFleet = { robot1 };
-
+			Ihorizontalmoveable[] allMovingThings = new Ihorizontalmoveable[];
 			// הפעלת הפונקציות הישנות
 			SmartGarageTester.RefuelAllCars(carFleet);
 			SmartGarageTester.ChargeAllRobots(robotFleet);

@@ -42,42 +42,38 @@ namespace SmartGarage_Exercise
 		/// <summary>
 		/// (פונקציה ישנה למחיקה) מזיזה ימינה 3 סוגי מערכים נפרדים.
 		/// </summary>
-		public static void MoveAllRight(Car[] cars, MotorCycle[] bikes, CleaningRobot[] robots)
+		public static void MoveAllRight(Ihorizontalmoveable[]movingthings)
 		{
 			Console.WriteLine("\n--- Moving all units right ---");
-			foreach (var car in cars)
+			foreach (var moveable in movingthings)
 			{
-				car.MoveRight();
+				moveable.MoveRight();
 			}
-			foreach (var bike in bikes)
+	
+		}
+
+		/* </summary>
+		  <param name="allVehicles">מערך של כלי רכב (Vehicle).</param>*/
+
+		public static void TestAllVehicles(Vehicle[] allVehicles)
+		{
+			Console.WriteLine("\n--- Commencing Vehicle diagnostics ---");
+			foreach (var v in allVehicles)
 			{
-				bike.MoveRight();
-			}
-			foreach (var robot in robots)
-			{
-				robot.MoveRight();
+				// קריאה לפעולת בסיס
+				Console.WriteLine($"-- Testing {v.ModelName} --");
+
+				// קריאה פולימורפית לפעולה אבסטרקטית!
+				v.Drive();
+
+				// קריאה לפעולה רגילה מהבסיס
+				if (v is FuelVehicle fv)
+				{
+					fv.Refuel();
+				}
 			}
 		}
 
-	  /* </summary>
-        <param name="allVehicles">מערך של כלי רכב (Vehicle).</param>*/
-        
-		public static void TestAllVehicles(Vehicle[] allVehicles)
-        {
-            Console.WriteLine("\n--- Commencing Vehicle diagnostics ---");
-            foreach (var v in allVehicles)
-            {
-                // קריאה לפעולת בסיס
-                Console.WriteLine($"-- Testing {v.ModelName} --");
-                
-                // קריאה פולימורפית לפעולה אבסטרקטית!
-                v.Drive(); 
-                
-                // קריאה לפעולה רגילה מהבסיס
-                v.Refuel(); 
-            }
-        }
-        
 
 		/*
         // -----------------------------------------------------------------
@@ -118,6 +114,17 @@ namespace SmartGarage_Exercise
             Console.WriteLine("--- Movable/Chargeable test complete ---");
         }
         */
+		public static void chargemoving(Ihorizontalmoveable[] movables)
+        {
+            foreach (var moveable in movables)
+			{
+
+				if (moveable is Ichargeable)
+				{
+					((Ichargeable)moveable).ChargeBattery();
+				}
+			}
+        }
 	}
 
 }

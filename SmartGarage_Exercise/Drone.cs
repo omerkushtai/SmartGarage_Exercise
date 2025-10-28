@@ -2,35 +2,41 @@ using System;
 
 namespace SmartGarage_Exercise;
 
-public class Drone : Imoveable, Ichargeable
+public class Drone : ElectricVehicle, Iverticalmoveable, Ichargeable
 {
+    public int velocity{get;set;}
     public int Batteryprecentage{get;private set;}
-    public void ChargeBattery()
+    public Drone(string model):base(model,100)
     {
-        Console.WriteLine("Drone battery charging.");
-        Batteryprecentage = 100;
-    }
-    public Drone(int battery)
-    {
-        Batteryprecentage = Math.Clamp(battery, 0, 100);
+        
     }
     public void Fly()
     {
-        if (Batteryprecentage > 10)
-        {
-            Console.WriteLine("Drone cannot fly. Battery low.");
-        }
-        else
-        {
-            Console.WriteLine("Drone is flying.");
-        }
+        Drive();
     }
-    public void MoveLeft()
+
+    public override void MoveLeft()
     {
-        Console.WriteLine("Drone is moving left.");
+         Console.WriteLine("Drone is moving right.");
     }
-    public void MoveRight()
+
+    public override void MoveRight()
     {
-        Console.WriteLine("Drone is moving right.");
+      Console.WriteLine("Drone is moving left.");
+    }
+
+    public override void Drive()
+    {
+        Console.WriteLine("Drone is driving/flying.");
+    }
+
+    public void MoveUp()
+    {
+       Console.WriteLine("Drone is moving up.");
+    }
+
+    public void MoveDown()
+    {
+        Console.WriteLine("Drone is moving down.");
     }
 }
